@@ -5,15 +5,19 @@
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
 
 /* your solution */
-
+* {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+}
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
- {
-  font-family: monospace;
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  background-color: LemonChiffon;
 }
 
 /* ------- Headings Part 1 ------- */
@@ -21,14 +25,17 @@
 /* Task 3: To set the line height to 1.5 is good for texts, because of accessibility concerns, but for the headings it seems too much. Let's change this by giving our headings a line height of 1.2: */
 
 /* your solution */
-
-/* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
-
-- Change the background color to white
-- Set the top margin to "0"
-- Add a padding of 10px
-- Center the text of the heading
-*/
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  background-color: white;
+  color: rgb(215, 208, 10);
+  margin-top: 0%;
+  padding: 10px;
+  text-align: center;
+}
 
 .title {
   /* your solution */
@@ -43,9 +50,22 @@
 - A fancy add on: Add a solid 5px border with the color "orange" that is only visible on the left. Hint: Use "border-left". :)
 - Bonus:  The left border of the second section which contains a list of favourite Pokémon should have the color "gold". Hint: You may need a second CSS rule.
 */
+/* your solution */
 
-section {
-  /* your solution */
+.about {
+  background-color: white;
+  padding: 10px;
+  border-left-style: solid;
+  border-left-color: orange;
+  border-left-width: 5px;
+}
+
+.favourites {
+  background-color: white;
+  padding: 10px;
+  border-left-style: solid;
+  border-left-color: gold;
+  border-left-width: 5px;
 }
 
 /* ------- Headings Part 2 ------- */
@@ -57,9 +77,14 @@ section {
 - The right border should end with the last character of the title. Hint: If you don't know how to do this, think about the display property.
 - Bonus: The color of the border of "Favourite Pokémon" should be "orange". Hint: You may need another CSS rule.
 */
+/* your solution */
 
 .subtitle {
-  /* your solution */
+  border-left: solid;
+  border-left-width: 3px;
+  border-right: solid;
+  border-right-width: 3px;
+  border-color: orange;
 }
 
 /* ------- List ------- */
@@ -69,7 +94,7 @@ section {
 /* add selector */
  {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 10px;
 }
 
 /* add selector */
