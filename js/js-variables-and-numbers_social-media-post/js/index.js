@@ -10,6 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const postTitle = "Welcome";
+const postText = "What's Up";
+const postLikes = 50;
+const postCreator = "eda";
+const isReported = true;
 
 // --^-- write your code here --^--
 
@@ -18,5 +23,9 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log(postTitle);
+console.log(postText);
+console.log(postLikes + 1);
+console.log(postCreator);
+console.log(isReported);
 // --^-- write your code here --^--
