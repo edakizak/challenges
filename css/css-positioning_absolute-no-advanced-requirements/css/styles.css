@@ -46,7 +46,8 @@ main {
   background-color: #85c1e9;
   position: absolute;
   top: 0px;
-  right: 230px;
+  left: 50;
+  transform: translate(-40%, -40%);
 }
 
 .box--top-right {
