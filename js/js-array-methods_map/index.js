@@ -29,6 +29,7 @@ const lowerCaseAnswers = cards.map((card) => card.answer.toLowerCase());
 const questionsAndAnswersTogether = cards.map(
   (card) => `${card.question} - ${card.answer}`
 );
+console.log(questionsAndAnswersTogether);
 
 const questionAndAnswer = cards.map((card) => {
   const object = {
