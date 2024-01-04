@@ -4,5 +4,5 @@ export default function Pentagon(getRandomColor) {
   pentagon.addEventListener("click", () => {
     pentagon.style.backgroundColor = getRandomColor();
   });
-  return Square;
+  return pentagon;
 }
