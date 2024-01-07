@@ -5,7 +5,6 @@ const button10 = document.querySelector('[data-js="sleep-10-button"]');
 const body = document.body;
 
 // --v-- code here --v--
-
 button3.addEventListener("click", async () => {
   body.classList.add("dark");
   icon.textContent = "💤";
@@ -31,7 +30,6 @@ async function handleSleepFor10Button() {
 }
 
 button10.addEventListener("click", handleSleepFor10Button);
-
 // --^-- code here --^--
 
 // returns a Promise that resolves after x seconds
