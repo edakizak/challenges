@@ -7,8 +7,8 @@ const runner3 = document.querySelector('[data-js="runner"]:nth-of-type(3)');
 const startRaceButton = document.querySelector('[data-js="start-race-button"]');
 
 // You'll need to change something about this callback function:
-//                                         ↙️
-startRaceButton.addEventListener("click", () => {
+//
+startRaceButton.addEventListener("click", async () => {
   startRaceButton.setAttribute("disabled", "");
 
   /**
@@ -24,6 +24,13 @@ startRaceButton.addEventListener("click", () => {
    **/
 
   // --v-- write your code here --v--
+  await animateRunner(runner1);
+  await animateRunner(runner2);
+  await animateRunner(runner3);
+
+  // const first = await animateRunner(runner1);
+  // const second = await animateRunner(runner2);
+  // const third = await animateRunner(runner);
 
   // --^-- write your code here --^--
 
