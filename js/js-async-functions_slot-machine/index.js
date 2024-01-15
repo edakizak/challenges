@@ -21,7 +21,14 @@ root.append(machine, spinButton, result);
 // This time the function is already defined as an async function. 🫡
 //                                      ↙️
 spinButton.addEventListener("click", async () => {
-  spinButton.disabled = true;
+  try {
+    spinButton.disabled = true;
+
+    // Start spinning all wheels and wait for each to finish
+    const wheel1Result = await wheel1.spin();
+    const wheel2Result = await wheel2.spin();
+    const wheel3Result = await wheel3.spin();
+  }
   /**
    * Hint 1:
    * The wheel elements have a spin method that returns a promise.
