@@ -1,8 +1,14 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  // let code = "?";
+  const [code, setCode] = useState("");
+
+  function handleClick(emoji) {
+    setCode(code + emoji);
+  }
 
   const validCode = "🐡🐠🐋";
 
@@ -12,6 +18,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            // setCode('${code}🐡')
+            handleClick("🐡");
             console.log("Update Code!");
           }}
         >
@@ -22,6 +30,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            // setCode('${code}🐋')
+            handleClick("🐋");
             console.log("Update Code!");
           }}
         >
@@ -32,6 +42,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            // setCode('${code}🐠')
+            handleClick("🐠");
             console.log("Update Code!");
           }}
         >
@@ -44,6 +56,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
+          setCode("");
           console.log("Reset Code!");
         }}
       >
