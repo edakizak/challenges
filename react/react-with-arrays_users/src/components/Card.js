@@ -1,12 +1,15 @@
 import "./Card.css";
 import Tag from "./Tag";
 import Button from "./Button";
+// import { USERS } from "../db";
+
 function Card({ user }) {
   return (
     <article className="card">
       <h2>{user.name}</h2>
       <ul className="card__taglist">
-        <Tag tag={user.roles[0]} />
+        {user.roles &&
+          user.roles.map((role) => <Tag tag={role} key={role.id} />)}
       </ul>
       <p>{user.about}</p>
       <Button>edit</Button>
