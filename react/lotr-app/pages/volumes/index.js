@@ -1,17 +1,11 @@
 import Link from "next/link";
-import { introduction } from "../../lib/data";
-import { useRouter } from "next/router";
+import { introduction } from "../../resources/lib/data.js";
 
 export default function Volumes() {
-  const router = useRouter();
-  function getRandomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
-
   return (
     <>
-      <h1>The Lord of the Rings</h1>
-      <p>{introduction}</p>
+      <h1> Lord of the Rings </h1>
+      <p> {introduction} </p>
       <ul>
         <li>
           <Link href="/volumes/the-fellowship-of-the-ring">
