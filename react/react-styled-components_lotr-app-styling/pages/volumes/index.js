@@ -1,18 +1,26 @@
-import Link from "next/link";
+import Introduction from "../../components/Introduction";
+import Main from "../../components/Main/Index.js";
+import Section from "../../components/Section";
+import VolumeList from "../../components/VolumeList";
 import { introduction, volumes } from "../../lib/data";
 
 export default function Volumes() {
   return (
-    <>
-      <h1>The Lord of the Rings</h1>
-      <p>{introduction}</p>
-      <ul>
-        {volumes.map((volume) => (
-          <li key={volume.id}>
-            <Link href={`/volumes/${volume.slug}`}>{volume.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <Main $gap={48}>
+      <Introduction
+        title={
+          <>
+            The Lord of
+            <br />
+            the Rings
+          </>
+        }
+        text={introduction}
+      />
+      <Section>
+        <h2>All Volumes</h2>
+        <VolumeList volumes={volumes} />
+      </Section>
+    </Main>
   );
 }
