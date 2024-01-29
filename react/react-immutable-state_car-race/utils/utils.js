@@ -24,3 +24,5 @@ export const initialCars = [
     position: { x: 0, lastDistance: 0 },
   },
 ];
+
+console.log(initialCars);
